@@ -9,17 +9,18 @@ def contiguous_subarray(array):
         tuple: It returns the subarray selected and the largests sum.
     """
     
-    sub_array_sum = 0
+    sub_array_sum = array[0]
+    sub_array_return = array[0]
     n = 0
     while n < len(array):    
         for i in range(len(array)):
             if n < i + 1:
                 if sub_array_sum < sum(array[n: i + 1]):
                     sub_array_sum = sum(array[n: i + 1 ])
-                    sub_array_return = array[n: i + 1]        
+                    sub_array_return = array[n: i + 1]     
         n += 1
         
-    return "Sub-array:", sub_array_return, "Sum:", sub_array_sum
+    return sub_array_return, sub_array_sum
 
  
 
@@ -54,4 +55,4 @@ def contiguous_subarray_LC(array):
         
     sub_array_return = array[initial_index: final_index + 1]
         
-    return "Sub-array:", sub_array_return, "Sum:", max_sum_array
+    return sub_array_return, max_sum_array
