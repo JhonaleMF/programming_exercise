@@ -5,4 +5,4 @@ The complexity of both functions are:
 - contiguous_subarray : Quadratic O(n^2)
 - contiguous_subarray_LC : Linear O(n)
 
-Libraries used: Numpy for functions and unittest for testing the two functions.
+Libraries used: Numpy and unittest for testing the two functions.
